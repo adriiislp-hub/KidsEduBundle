@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 Kids Educational Bundle</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: #f0f8ff; min-height: 100vh; }
+  header {
+    background: linear-gradient(135deg, #1A237E 0%, #0097A7 100%);
+    color: white; padding: 24px 32px; text-align: center;
+  }
+  header h1 { font-size: 26px; margin-bottom: 6px; }
+  header p  { font-size: 14px; opacity: 0.85; }
+  .container { max-width: 920px; margin: 32px auto; padding: 0 16px 60px; }
+  .vol-card {
+    background: white; border-radius: 14px; margin-bottom: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.09); overflow: hidden;
+    border: 1.5px solid #e0e8f0;
+  }
+  .vol-header {
+    display: flex; align-items: center; gap: 16px;
+    padding: 16px 20px; cursor: pointer; transition: background 0.18s;
+    user-select: none;
+  }
+  .vol-header:hover { background: #f0fafc; }
+  .vol-num {
+    background: #0097A7; color: white; font-size: 18px; font-weight: 800;
+    border-radius: 50%; width: 46px; height: 46px; min-width: 46px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .vol-info { flex: 1; }
+  .vol-info h2 { font-size: 15px; color: #1A237E; font-weight: 700; }
+  .vol-info p  { font-size: 12px; color: #777; margin-top: 3px; }
+  .vol-actions { display: flex; gap: 8px; flex-shrink: 0; }
+  .btn {
+    padding: 8px 16px; border-radius: 8px; font-size: 12px; font-weight: 700;
+    text-decoration: none; border: none; cursor: pointer; white-space: nowrap;
+  }
+  .btn-dl { background: #F4511E; color: white; }
+  .btn:hover { opacity: 0.85; }
+  .chevron { font-size: 20px; color: #aaa; transition: transform 0.22s; margin-left: 4px; flex-shrink:0; }
+  .vol-header.open .chevron { transform: rotate(90deg); }
+  .vol-body { display: none; border-top: 1.5px solid #e8f4f8; }
+  .vol-body.open { display: block; }
+  .toc-hint {
+    background: #e8f5e9; border-left: 4px solid #43A047;
+    padding: 10px 18px; font-size: 12px; color: #2E7D32;
+  }
+  .pdf-frame { width: 100%; height: 80vh; border: none; display: block; background: #f5f5f5; }
+  @media(max-width:560px){
+    .vol-actions { flex-direction: column; }
+    .vol-header { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>📚 Kids Educational Bundle</h1>
+  <p>Click any volume to preview it • Use the clickable TOC on page 1 of each PDF to jump to any activity</p>
+</header>
+
+<div class="container">
+
+  <div class="vol-card" id="card1">
+    <div class="vol-header" onclick="toggle(1)">
+      <div class="vol-num">1</div>
+      <div class="vol-info">
+        <h2>Alphabet Part 1</h2>
+        <p>Beginning Sounds · What's the Letter? · Color the Pictures · Cut & Paste · 248 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1kmvWBcvMBTF7LakZkNtX7CBTOr4f5Tfg" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body1">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1kmvWBcvMBTF7LakZkNtX7CBTOr4f5Tfg/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card2">
+    <div class="vol-header" onclick="toggle(2)">
+      <div class="vol-num">2</div>
+      <div class="vol-info">
+        <h2>Alphabet Part 2</h2>
+        <p>Tracing · Flash Cards · Coloring · Matching · 769 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1X1zmSODSyVn8g3vnZUjcx7p0N0yS4Yyb" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body2">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1X1zmSODSyVn8g3vnZUjcx7p0N0yS4Yyb/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card3">
+    <div class="vol-header" onclick="toggle(3)">
+      <div class="vol-num">3</div>
+      <div class="vol-info">
+        <h2>Numbers, Tracing, Shapes &amp; Coloring</h2>
+        <p>Addition · Shapes · Do-a-Dot · Number Tracing · 781 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1-FwMuKFdW93F6h0dthMoE4A6MbuQAxgF" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body3">
+      <div class="toc-hint">📑 Pages 1–2 have a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1-FwMuKFdW93F6h0dthMoE4A6MbuQAxgF/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card4">
+    <div class="vol-header" onclick="toggle(4)">
+      <div class="vol-num">4</div>
+      <div class="vol-info">
+        <h2>Reading</h2>
+        <p>Reading Comprehension · Worksheets · 296 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1KQoCUMBGOSB-A1Cc7T1Yhl-NOUOQG9Qt" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body4">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1KQoCUMBGOSB-A1Cc7T1Yhl-NOUOQG9Qt/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card5">
+    <div class="vol-header" onclick="toggle(5)">
+      <div class="vol-num">5</div>
+      <div class="vol-info">
+        <h2>Sight Words, Events &amp; Flashcards</h2>
+        <p>Sight Words · Valentine's/Mother's/Father's Day · Flashcards · 663 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1XYYAcGniF6bT5RoEcOjrtggjp2BUjTpm" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body5">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1XYYAcGniF6bT5RoEcOjrtggjp2BUjTpm/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card6">
+    <div class="vol-header" onclick="toggle(6)">
+      <div class="vol-num">6</div>
+      <div class="vol-info">
+        <h2>Pretend Play</h2>
+        <p>Apple Orchard · Birthday · Dentist · Pizza Shop · Tea Party · 139 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=18RpdvW88SnLUpMtwaDOFInzi0fUYeVvA" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body6">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/18RpdvW88SnLUpMtwaDOFInzi0fUYeVvA/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card7">
+    <div class="vol-header" onclick="toggle(7)">
+      <div class="vol-num">7</div>
+      <div class="vol-info">
+        <h2>Activities &amp; Games</h2>
+        <p>Games · Activity Sheets · 144 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1QgBVcaucC9ni--KeDCOt7nxD33-jyKI_" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body7">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1QgBVcaucC9ni--KeDCOt7nxD33-jyKI_/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card8">
+    <div class="vol-header" onclick="toggle(8)">
+      <div class="vol-num">8</div>
+      <div class="vol-info">
+        <h2>Charts, Calendars, Colors &amp; Dot Activities</h2>
+        <p>Busy Books · Chore Charts · Calendar · Do-a-Dot · 322 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1thmrZLIsFFJApMnN0aQkw2GtXKNxjPeV" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body8">
+      <div class="toc-hint">📑 Page 1 has a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1thmrZLIsFFJApMnN0aQkw2GtXKNxjPeV/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+  <div class="vol-card" id="card9">
+    <div class="vol-header" onclick="toggle(9)">
+      <div class="vol-num">9</div>
+      <div class="vol-info">
+        <h2>Emotions, Matching, Mazes, Patterns &amp; More</h2>
+        <p>Emotions · Mazes · Puzzles · Scissor Skills · Reward Charts · 304 pages</p>
+      </div>
+      <div class="vol-actions">
+        <a class="btn btn-dl" href="https://drive.google.com/uc?export=download&id=1SgKcUbEmeSdkwQwZ4mfI0eiOtrJ1sCXh" target="_blank">↓ Download</a>
+      </div>
+      <span class="chevron">›</span>
+    </div>
+    <div class="vol-body" id="body9">
+      <div class="toc-hint">📑 Pages 1–2 have a fully clickable Table of Contents — click any entry to jump straight to that activity.</div>
+      <iframe class="pdf-frame" src="https://drive.google.com/file/d/1SgKcUbEmeSdkwQwZ4mfI0eiOtrJ1sCXh/preview" allow="autoplay"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function toggle(n) {
+    const body = document.getElementById('body' + n);
+    const hdr  = document.querySelector('#card' + n + ' .vol-header');
+    const isOpen = body.classList.contains('open');
+    document.querySelectorAll('.vol-body').forEach(b => b.classList.remove('open'));
+    document.querySelectorAll('.vol-header').forEach(h => h.classList.remove('open'));
+    if (!isOpen) {
+      body.classList.add('open');
+      hdr.classList.add('open');
+      setTimeout(() => document.getElementById('card' + n).scrollIntoView({ behavior: 'smooth', block: 'start' }), 50);
+    }
+  }
+</script>
+</body>
+</html>
